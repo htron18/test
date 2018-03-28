@@ -1,0 +1,11 @@
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		//HelloWorldの出力
+		System.out.println("Hello World");
+		System.out.println(char char1='A');
+	}
+	
+
+}

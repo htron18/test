@@ -2,8 +2,7 @@ package com.internousdev.miamiburger2.util;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.lang3.StringUtils
-;
+import org.apache.commons.lang3.StringUtils;
 public class InputChecker {
 
 
@@ -65,7 +64,7 @@ public class InputChecker {
 		}
 
 		if(availableHalfWidthSymbols){
-			regularExpression +="-/:-@\\[-\\'\\{-\\~";
+			regularExpression +="!-/:-@¥[-`{-~]+$";
 			characterTypeList.add("半角記号");
 		}
 
@@ -73,7 +72,7 @@ public class InputChecker {
 			regularExpression +="]+$";
 		}
 		////////////////////////////ここまで///////////////////////////
-
+System.out.println(regularExpression);
 
 		//判別した項目に応じてエラーメッセージを返します
 		String characterType = "";
@@ -99,6 +98,4 @@ public class InputChecker {
 		}
 		return stringList;
 	}
-
-
 }

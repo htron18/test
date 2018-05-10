@@ -1,0 +1,60 @@
+package com.internousdev.miamiburger2.dao;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.internousdev.miamiburger2.dto.LoginDTO;
+import com.internousdev.miamiburger2.util.DBConnector;
+
+public class LoginDAO {
+	public LoginDTO select(String userId,String password) throws SQLException{
+		LoginDTO dto=new LoginDTO();
+
+		DBConnector db=new DBConnector();
+		Connection con=db.getConnection();
+		String sql="select * from user_info where user_id=? and password=?";
+
+		try {
+			PreparedStatement ps=con.prepareStatement(sql);
+			ps.setString(1, userId);//SQL文の「?」パラメータに、指定した値を挿入する。
+			ps.setString(2, password);
+
+			ResultSet rs=ps.executeQuery();// SQL文を実行する
+
+			if(rs.next()) { //DBから取得した情報をDTOクラスに格納する
+				dto.setId(rs.getInt("id"));
+				dto.setUserId(rs.getString("user_id"));
+				dto.setPassword(rs.getString("password"));
+			}
+			}catch(SQLException e) {
+				e.printStackTrace();
+			}finally {
+				con.close();
+			}
+			return dto;
+		}
+	public int cartUpdate(String userId, String tempUserId) throws SQLException{
+
+		int count=0;
+		DBConnector db=new DBConnector();
+		Connection con=db.getConnection();
+		String sql="UPDATE cart_info SET user_id = ? WHERE temp_user_id = ?";
+
+		try {
+			PreparedStatement ps=con.prepareStatement(sql);
+
+			ps.setString(1,userId);
+			ps.setString(2, tempUserId);
+
+			count= ps.executeUpdate();
+
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			con.close();
+		}
+		return count;
+	}
+
+}

@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+
+/* 全ページ共通-------------------------------------------------- */
+
+body{
+	font-size:large;
+}
+.ruby{
+	font-size:small;
+}
+.error{
+	font-size:medium;
+	color:red;
+}

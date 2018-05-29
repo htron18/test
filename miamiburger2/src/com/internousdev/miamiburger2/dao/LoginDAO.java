@@ -22,10 +22,29 @@ public class LoginDAO {
 
 			ResultSet rs=ps.executeQuery();// SQL文を実行する
 
-			if(rs.next()) { //DBから取得した情報をDTOクラスに格納する
-				dto.setId(rs.getInt("id"));
+			while(rs.next()) { //DBから取得した情報をDTOクラスに格納する
 				dto.setUserId(rs.getString("user_id"));
 				dto.setPassword(rs.getString("password"));
+				dto.setFamilyName(rs.getString("family_name"));
+				dto.setFirstName(rs.getString("first_name"));
+				dto.setFamilyNameKana(rs.getString("family_name_kana"));
+				dto.setFirstNameKana(rs.getString("first_name_kana"));
+				dto.setSex(rs.getInt("sex"));
+				dto.setEmail(rs.getString("email"));
+				dto.setStatus(rs.getInt("status"));
+				dto.setLogined("1");
+
+				if(userId.equals("admin")) {
+					dto.setMasterFlg(1);
+				}else {
+					dto.setMasterFlg(0);
+				}
+
+				dto.setSecretQuestion(rs.getString("secret_question"));
+				dto.setSecretAnswer(rs.getString("secret_answer"));
+				dto.setInsertDate(rs.getString("regist_date"));
+				dto.setUpdateDate(rs.getString("update_date"));
+
 			}
 			}catch(SQLException e) {
 				e.printStackTrace();

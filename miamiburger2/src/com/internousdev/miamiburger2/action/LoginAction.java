@@ -22,18 +22,22 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	private Map<String,Object> session;
 
 
+
 	public String execute() throws SQLException{
 		String ret=ERROR;
 		LoginDAO dao=new LoginDAO();
 		LoginDTO dto=new LoginDTO();
 		dto=dao.select(userId,password);
 
+		//userIdの保存
 		if(saveIdFlg) {
 			session.put("saveId", userId);
 		}else {
 			session.remove("saveId");
 		}
 
+
+		//エラー文の表示
 		InputChecker inputChecker=new InputChecker();
 
 		loginIdErrorMessageList=inputChecker.doCheck("ログインID",userId,1,8,true,false,false,true,false);
@@ -45,15 +49,16 @@ public class LoginAction extends ActionSupport implements SessionAware{
 			session.put("logined", 0);
 		}
 
-
+		//ログイン認証
 		if(userId.equals(dto.getUserId())) {
-			if(password.equals(dto.getPassword())) {
-				ret=SUCCESS;
+			if(password.equals(dto.getPassword())){
+			ret = SUCCESS ; }
 			}
-		}
-		session.put("userId", dto.getUserId());
-		return ret;
-	}
+			session.put("userId", dto.getUserId());
+
+			return ret;
+			}
+
 
 
 	public String getUserId() {

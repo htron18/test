@@ -4,9 +4,9 @@
 		<item value="1366" key="DIALOG_WIDTH"/>
 		<item value="true" key="BUILD_ALL"/>
 		<item value="false" key="TOGGLE_SELECTED"/>
-		<item value="768" key="DIALOG_HEIGHT"/>
+		<item value="690" key="DIALOG_HEIGHT"/>
 		<item value="0" key="DIALOG_X_ORIGIN"/>
-		<item value="0" key="DIALOG_Y_ORIGIN"/>
+		<item value="23" key="DIALOG_Y_ORIGIN"/>
 		<item value="true" key="BUILD_NOW"/>
 	</section>
 	<section name="ExternalProjectImportWizard">

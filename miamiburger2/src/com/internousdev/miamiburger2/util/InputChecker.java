@@ -2,7 +2,8 @@ package com.internousdev.miamiburger2.util;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.StringUtils
+;
 public class InputChecker {
 
 
@@ -49,12 +50,12 @@ public class InputChecker {
 		}
 
 		if(availableKanji){
-			regularExpression +="亜-黑";
+			regularExpression +="一-龠";
 			characterTypeList.add("漢字");
 		}
 
 		if(availableHiragana){
-			regularExpression +="ぁ-ん";
+			regularExpression +="ぁ-ゞ";
 			characterTypeList.add("ひらがな");
 		}
 
@@ -64,7 +65,7 @@ public class InputChecker {
 		}
 
 		if(availableHalfWidthSymbols){
-			regularExpression +="!-/:-@¥[-`{-~]+$";
+			regularExpression +="-/:-@\\[-\\`\\{-\\~";
 			characterTypeList.add("半角記号");
 		}
 

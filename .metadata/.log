@@ -5492,3 +5492,27 @@ java.lang.IllegalArgumentException: timeout value is negative
 
 !ENTRY org.eclipse.jface.text 2 0 2018-05-29 14:14:57.185
 !MESSAGE 重複テンプレート ID: 'zigen.plugin.db.template.sql.case'
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-05-29 17:02:46.131
+!MESSAGE ローカル・ホスト の Tomcat v8.0 サーバー で必要な幾つかのポート (8080, 8009) がすでに使用中です。サーバーはすでに別のプロセスで稼働中であるか、システム・プロセスがそのポートを使用中である可能性があります。このサーバーを始動するには、他のプロセスを停止するか、ポート番号を変更する必要があります。
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2018-05-29 17:05:05.232
+!MESSAGE ランタイム Tomcat8 (Java8) はプロジェクト・ファセット Java 1.8 をサポートしていません。
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2018-05-29 17:09:02.851
+!MESSAGE ランタイム Tomcat8 (Java8) はプロジェクト・ファセット Java 1.8 をサポートしていません。
+
+!ENTRY mergedoc.encoding 2 0 2018-05-29 17:36:21.400
+!MESSAGE リソース '/TestDB/src/DBConnector.java' が存在しません。
+
+!ENTRY mergedoc.encoding 2 0 2018-05-29 17:36:21.402
+!MESSAGE リソース '/TestDB/src/DBConnector.java' が存在しません。
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2018-05-29 17:38:26.795
+!MESSAGE ランタイム Tomcat8 (Java8) はプロジェクト・ファセット Java 1.8 をサポートしていません。
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2018-05-29 17:39:48.091
+!MESSAGE ランタイム Tomcat8 (Java8) はプロジェクト・ファセット Java 1.8 をサポートしていません。
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2018-05-29 17:41:06.281
+!MESSAGE ランタイム Tomcat8 (Java8) はプロジェクト・ファセット Java 1.8 をサポートしていません。

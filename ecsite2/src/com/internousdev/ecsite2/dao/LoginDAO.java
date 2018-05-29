@@ -3,6 +3,7 @@ package com.internousdev.ecsite2.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
 import com.internousdev.ecsite2.dto.LoginDTO;
 import com.internousdev.ecsite2.util.DBConnector;
 
@@ -24,7 +25,7 @@ public class LoginDAO {
 
 			if(resultSet.next()){
 				loginDTO.setLoginId(resultSet.getString("login_id"));
-				loginDTO.setLoginPassword(result.getString("login_pass"));
+				loginDTO.setLoginPassword(resultSet.getString("login_pass"));
 				loginDTO.setUserName(resultSet.getString("user_name"));
 
 				if(!(resultSet.getString(login_id).equals(null))){

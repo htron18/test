@@ -124,7 +124,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="miamiburger3" path="/miamiburger3" reloadable="false" source="org.eclipse.jst.jee.server:miamiburger3"/><Context docBase="miamiburger2" path="/miamiburger2" reloadable="false" source="org.eclipse.jst.jee.server:miamiburger2"/><Context docBase="HelloJSP" path="/HelloJSP" reloadable="false" source="org.eclipse.jst.jee.server:HelloJSP"/><Context docBase="HelloServlet" path="/HelloServlet" reloadable="false" source="org.eclipse.jst.jee.server:HelloServlet"/><Context docBase="template" path="/template" reloadable="false" source="org.eclipse.jst.jee.server:template"/><Context docBase="ecsite" path="/ecsite" reloadable="false" source="org.eclipse.jst.jee.server:ecsite"/></Host>
+      <Context docBase="miamiburger3" path="/miamiburger3" reloadable="false" source="org.eclipse.jst.jee.server:miamiburger3"/><Context docBase="miamiburger2" path="/miamiburger2" reloadable="false" source="org.eclipse.jst.jee.server:miamiburger2"/><Context docBase="HelloJSP" path="/HelloJSP" reloadable="false" source="org.eclipse.jst.jee.server:HelloJSP"/><Context docBase="HelloServlet" path="/HelloServlet" reloadable="false" source="org.eclipse.jst.jee.server:HelloServlet"/><Context docBase="ecsite" path="/ecsite" reloadable="false" source="org.eclipse.jst.jee.server:ecsite"/></Host>
     </Engine>
   </Service>
 </Server>

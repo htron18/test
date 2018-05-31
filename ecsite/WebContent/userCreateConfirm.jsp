@@ -99,6 +99,9 @@
 					<s:submit value="完了"/>
 				</td>
 			</tr>
+			<s:hidden name="loginUserId"/>
+			<s:hidden name="loginPassword"/>
+			<s:hidden name="userName"/>
 				</s:form>
 			</table>
 		</div>
